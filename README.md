@@ -1,4 +1,5 @@
-# Coursera Getting and Cleaning Data Course Projec: Assignment
+# Coursera Getting and Cleaning Data Course Project
+## Week 4 Assignment
 
 The repository contains the course project, code book and .R file. 
 

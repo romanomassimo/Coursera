@@ -12,6 +12,8 @@
 
 
 ## Measurments
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ.The body linear acceleration and angular velocity were derived in time to obtain Jerk signals.Fast Fourier Transform (FFT) was applied to frequency measurments.
+
 |features|
 |--------------------------------------|
 |timeBodyAccelerometer-XYZ|
@@ -31,3 +33,5 @@
 |frequencyBodyAccelerometerJerkMagnitude|
 |frequencyBodyGyroscopeMagnitude|
 |frequencyBodyGyroscopeJerkMagnitude|
+
+

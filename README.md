@@ -9,7 +9,8 @@ The repository contains the course project, code book and .R file.
 
 - The tidy.alldata.txt file contains the clean dataset.
 
-- The initial dataset can be downloaded [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+- The initial dataset (Human Activity Recognition Using Smartphones Dataset
+Version 1.0) can be downloaded [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
 ## Cleaning process
 1. Merges the training and the test sets to create one data set.

@@ -14,8 +14,8 @@
 |----------|
 |[1,30]
 
-## Measurments
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ.The body linear acceleration and angular velocity were derived in time to obtain Jerk signals.Fast Fourier Transform (FFT) was applied to frequency measurments.
+## Measurements
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. The body linear acceleration and angular velocity were derived in time to obtain Jerk signals.Fast Fourier Transform (FFT) was applied to frequency measurements.
 
 Features are normalized and bounded within [-1,1].
 
@@ -54,7 +54,7 @@ The code sets the working directory, checks if the necessary folder is already d
     }
 
 ### II. Merges the training and the test sets to create one data set
-"subject_test", "X_test" and "Y_test", and "subject_train", "X_train" and "Y_train" are loaded into R, named with "features.txt" and merged into "test" and "train" dataframes. "test" and "train" are then unioned into "alldata".
+"subject_test", "X_test" and "Y_test", and "subject_train", "X_train" and "Y_train" are loaded into R, named with "features.txt" and merged into "test" and "train" dataframes. "test" and "train" are then united into "alldata".
 
     feature <- read.csv("UCI HAR Dataset/features.txt", sep="", header = FALSE)
     subject_test <- read.csv("UCI HAR Dataset/test/subject_test.txt", header = FALSE, col.names = "Subject")

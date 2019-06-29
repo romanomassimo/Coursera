@@ -42,6 +42,8 @@ Features are normalized and bounded within [-1,1].
 ### All variables
 180 obs. of  59 variables
 
+|Variables|
+|------------------------------------|
 |Subject|
 |ActivityName|
 |timeBodyAccelerometer.std...X|

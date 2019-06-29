@@ -72,14 +72,46 @@ The code sets the working directory, checks if the necessary folder is already d
           
     Y_train <- read.csv("UCI HAR Dataset/train/Y_train.txt", sep="", header = FALSE, col.names = "ActivityCode")
 
+    test <- cbind(X_test, Y_test, subject_test)
+    train <- cbind(X_train, Y_train, subject_train)
+    alldata <- rbind(test,train) %>%
+    tbl_df()
+    
 ### III. Extracts only the measurements on the mean and standard deviation for each measurement.
 Subject ID, activity code and mean and standard deviation for each measurements are then selected.
 
+    alldata <- select(alldata,contains("std"), contains("mean..."), contains("Subject"), ActivityCode)
+
 ### IV. Uses descriptive activity names to name the activities in the data set
-Activity name is added to the dataset.
+
+    Activity name is added to the dataset.
+
+    activity <- read.csv("UCI HAR Dataset/activity_labels.txt", sep="", header = FALSE,
+                          col.names = c("ActivityCode","ActivityName"))
+
+    nrow(alldata)
+    alldata <- merge(alldata,activity, by.x = "ActivityCode", by.y = "ActivityCode", all = TRUE)
+    alldata <- select(alldata, -ActivityCode)
 
 ### V. Appropriately labels the data set with descriptive variable names.
+I renamed the labels by replacing the "t" with time, "Acc" with Accelerometer, "Gyro" with Gyroscope", first "f" with frequency, "Mag" with Magnitude and "BodyBody" with Body.
 
+    nam <- names(alldata)
+    desc.names <- sub("^t","time", nam)
+    desc.names <- sub("Acc","Accelerometer", desc.names)
+    desc.names <- sub("Gyro","Gyroscope", desc.names)
+    desc.names <- sub("^f","frequency", desc.names)
+    desc.names <- sub("Mag","Magnitude", desc.names)
+    desc.names <- sub("BodyBody","Body", desc.names)
+    names(alldata) <- desc.names
 
+### VI. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+Finally, using a data table format, I grouped the records by subject and activity and calculated the averages for each measurement, before saving the tidy data into a "txt" file.
+
+    tidy.alldata <- tbl_df(alldata) %>%
+      group_by(Subject,ActivityName) %>%
+      summarise_all(mean)
+
+    write.table(tidy.alldata, "tidy.alldata.txt", sep=",")
 
 

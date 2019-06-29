@@ -14,6 +14,13 @@
 |----------|
 |[1,30]
 
+### All dimension variables
+180 obs. of  2 variables
+|Variables|
+|------------------------------------|
+|Subject|
+|ActivityName|
+
 ## Measurements
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. The body linear acceleration and angular velocity were derived in time to obtain Jerk signals.Fast Fourier Transform (FFT) was applied to frequency measurements.
 
@@ -39,13 +46,11 @@ Features are normalized and bounded within [-1,1].
 |frequencyBodyGyroscopeMagnitude|
 |frequencyBodyGyroscopeJerkMagnitude|
 
-### All variables
-180 obs. of  59 variables
+### All measurement variables
+180 obs. of  57 variables
 
 |Variables|
 |------------------------------------|
-|Subject|
-|ActivityName|
 |timeBodyAccelerometer.std...X|
 |timeBodyAccelerometer.std...Y|
 |timeBodyAccelerometer.std...Z|

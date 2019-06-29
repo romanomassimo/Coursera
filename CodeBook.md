@@ -16,6 +16,7 @@
 
 ### All dimension variables
 180 obs. of  2 variables
+
 |Variables|
 |------------------------------------|
 |Subject|

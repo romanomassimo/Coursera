@@ -147,8 +147,7 @@ Subject ID, activity code and mean and standard deviation for each measurements 
     alldata <- select(alldata,contains("std"), contains("mean..."), contains("Subject"), ActivityCode)
 
 ### IV. Uses descriptive activity names to name the activities in the data set
-
-    Activity name is added to the dataset.
+Activity code is replaced by a description of the activity.
 
     activity <- read.csv("UCI HAR Dataset/activity_labels.txt", sep="", header = FALSE,
                           col.names = c("ActivityCode","ActivityName"))
